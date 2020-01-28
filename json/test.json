@@ -1,0 +1,8 @@
+{
+    "users": [{
+        "id": 1,
+        "login": "kes",
+        "pass": "thepassword",
+        "role": "author"
+    }]
+}

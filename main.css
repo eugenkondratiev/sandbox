@@ -1,0 +1,31 @@
+* {
+    margin:0;
+    padding : 0;
+    font: 14px 500;
+}
+
+body {
+    background-color: #C9F8B7;
+}
+
+ul {
+    margin: 1em auto 0;
+    width: 99vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul li {
+    display: flex;
+    flex-basis: 20vw;
+    min-height: 10vh;
+    margin : 0 .5em;
+    justify-content: space-around;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+}

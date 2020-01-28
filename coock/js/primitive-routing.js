@@ -36,6 +36,10 @@ function deleteCookie(name) {
     })
 }
 
+// function deleteLastLocation (depth = -1) {
+//  ;
+// }
+
 /**
  * 
  */
@@ -62,6 +66,7 @@ console.log('search - ', search);
 console.log('uri - ', uri);
 
 
+
 const _userRole = (function () {
     if (!search) {
         console.log("nosearch");
@@ -78,6 +83,7 @@ const _userRole = (function () {
             const userRole = users[userIndex].role;
             if (users[userIndex].pass === search.pass) {
                 setCookie("role", userRole);
+                setCookie("user", users[userIndex].login);
             } else {
                 alert("WRONG PASSWORD");
                 return REFRESH_PAGE;
@@ -90,12 +96,26 @@ const _userRole = (function () {
     if (search.logout) {
         console.log("LOGOUT");
         deleteCookie("role");
-
+        deleteCookie("user");
         return REFRESH_PAGE;
     }
 })();
 if (_userRole === REFRESH_PAGE) {
-    window.open(uri.origin + uri.pathname, "_self");
+    // localStorage.setItem("delLastlocation", 1);
+    window.location.replace(uri.origin + uri.pathname);
+    // window.open(uri.origin + uri.pathname, "_self");
+
+}
+
+switch (_path) {
+    case "coock":
+        ;
+        break;
+    case "coock/view":
+        console.log("view");
+        break;
+    default:
+        break;
 }
 console.log("_userRole", _userRole);
 console.log('coockies - ', document.cookie);
