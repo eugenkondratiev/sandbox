@@ -1,4 +1,7 @@
 ;
+// const MAIN_ORIGIN = "http://127.0.0.1:5500";
+const MAIN_ORIGIN = "https://eugenkondratiev.github.io/sandbox";
+
 function getCookie(name) {
     let matches = document.cookie.match(new RegExp(
         "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
