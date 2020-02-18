@@ -1,0 +1,25 @@
+.main-menu {
+    display:block;
+    text-align: center;
+    width: 100%;
+}
+
+.main-menu__wrap {
+    width: 100%;
+
+}
+
+.main-menu__wrap ul {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.main-menu__item {
+    display: block;
+    padding: .5em;
+    color: #fff;
+    
+}

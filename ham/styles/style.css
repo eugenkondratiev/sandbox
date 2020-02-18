@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: normal normal 400 black 14px/20px Helvetica, serif;
+}
+ul,
+ol {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+body {
+    background-color: lightsteelblue;
+    width:100vw;
+    min-height: 100vh;
+}
