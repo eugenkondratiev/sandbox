@@ -46,9 +46,8 @@ const ans = (async () => {
     try {
         const resp = await ajaxGet("GET", "https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5");
 
-        const resp = await ajaxGet("POST", "http://95.158.47.15:3001/update-last-day/2");
+        const resp2 = await ajaxGet("POST", "http://95.158.47.15:3001/update-last-day/2");
         // const resp = await ajaxGet("GET", "https://mdn.mozillademos.org/files/16553/DgsZYJNXcAIPwzy.jpg");
-        const resp = await ajaxGet("GET", "https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5");
         console.log("response - ", resp);
         // return(["OK", ..."XXX"]);
 
