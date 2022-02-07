@@ -1,0 +1,57 @@
+
+main.root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.game-root {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    max-width: 290px;
+}
+
+.clublabel {
+    min-width: 20ch;
+    background-color: lightslategray;
+    margin: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 45%;
+}
+.clubname{
+    text-align: center;
+}
+.game-scores {
+    background-color: khaki;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 20ch;
+    padding: 30px 0;
+}
+.gamelabel{
+    border: solid 1px grey;
+    padding: 2px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.score {
+    border: solid 1px red;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+.game-score{
+    /* justify-self: flex-start; */
+    /* text-align: center; */
+    margin: 0 auto;
+}

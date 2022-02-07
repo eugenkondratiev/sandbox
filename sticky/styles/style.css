@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(145, 240, 153);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    overflow: hidden;
+}
+
+.wrapper {
+    margin: auto;
+    width: 50vw;
+    height: 40vh;
+    overflow-x: hidden;
+    font-size: 2rem;
+    box-shadow: 1px 2px 10px 2px grey;
+    /* padding:0 1rem; */
+}
+
+.wrapper dl {
+    padding: 0;
+    margin-block-start: 0;
+    width: 100%;
+    margin-block-end: 14rem;
+}
+
+.wrapper dt {
+    background: rgb(158 158 158);
+    position: sticky;
+    top: 0;
+    text-align: center;
+}
+
+.wrapper dd {
+    margin-inline-start: 1rem;
+    
+}
