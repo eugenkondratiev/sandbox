@@ -7,7 +7,7 @@ function parseExcelTableData(_data) {
     // });
 
     const _table = rows.map(r => {
-        return r.split('\t')
+        return r.split('\t').map(_=>_.trim())
     })
 
     return _table.filter((row, rowIndex) => {
