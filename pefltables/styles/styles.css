@@ -22,7 +22,7 @@ body {
 
 .wrapper textarea {
     display: flex;
-    min-width: 40ch;
+    min-width: 70%;
     min-height: 30ch;
     align-items: center;
     justify-content: center;
