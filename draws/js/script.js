@@ -7,7 +7,7 @@ function parseExcelTableData(_data) {
     // });
 
     const _table = rows.map(r => {
-        return r.split('\t').map(_=>_.trim())
+        return r.split('\t').map(_ => _.trim())
     })
 
     return _table.filter((row, rowIndex) => {
@@ -71,18 +71,11 @@ function formCalendar(tournament) {
         calendar[tour].games = formTourGames(teamslist, shift, tour)
 
         //now carousel all except first element
-        const secondHalf = teamslist.splice(shift);
+        let middle = teamslist.splice(shift - 1, 1);
 
-        const [first, ...rest] = teamslist
-        // console.log(" ====  split ", first, rest);
-        const last = rest.pop();
-        secondHalf.push(last)
-        const middle = secondHalf.shift()
-        rest.unshift(middle)
-        // console.log(" ====  shifted teams", first, rest);
-
-        teamslist = [first, ...rest, ...secondHalf]
-        // console.log("newteamslist  -" , newteamslist);
+        teamslist.push(middle[0])
+        middle = teamslist.splice(shift - 1, 1);
+        teamslist.splice(1, 0, middle[0]);  
     }
 
     calendar.pop()
@@ -102,26 +95,26 @@ function transformCalendarToFixtures(calendar) {
 
     calendar.forEach((gr, grIndex) => {
         gr.forEach((tour, tourIndex) => {
-            fixtures[tourIndex].push(tour.games.join('\n')+'\n')
+            fixtures[tourIndex].push(tour.games.join('\n') + '\n')
         })
     })
     console.log("fixtures - ", fixtures);
 
-    return fixtures.reduce((acc, fixturesTour, i)=>{
+    return fixtures.reduce((acc, fixturesTour, i) => {
 
         console.log("fixturesTour -", fixturesTour);
         return acc + `\n\r${fixturesTour.join('')}`
-    },"\n\r")
+    }, "\n\r")
 }
 
 function showGroups(_groups) {
-    return _groups.map((gr,i )=> `Группа ${i+1}  - ${gr.join(' ')}\n`).join('')
+    return _groups.map((gr, i) => `Группа ${i + 1}  - ${gr.join(' ')}\n`).join('')
 }
 const _rawData = document.getElementById("raw-input")
 const _outputData = document.getElementById("fixtures-output")
 let mainCalendar
 let groupsArray
-let fixturesList 
+let fixturesList
 
 document.getElementById("trasform-button").addEventListener('click', (e) => {
     groupsArray = formGroups(parseExcelTableData(_rawData.value))
