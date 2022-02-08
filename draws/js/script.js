@@ -46,7 +46,7 @@ function formCalendar(tournament) {
 
     if ((teamslist.length % 2)) teamslist.push(null)
 
-    console.log("teamsList - ", teamslist);
+    // console.log("teamsList - ", teamslist);
 
     const calendar = teamslist.map((_, index) => {
         return { name: `Тур ${index + 1}`, games: [] }
@@ -69,10 +69,8 @@ function formCalendar(tournament) {
 
     for (let tour = 0; tour < N - 1; tour++) {
         calendar[tour].games = formTourGames(teamslist, shift, tour)
-
         //now carousel all except first element
         let middle = teamslist.splice(shift - 1, 1);
-
         teamslist.push(middle[0])
         middle = teamslist.splice(shift - 1, 1);
         teamslist.splice(1, 0, middle[0]);  
@@ -91,18 +89,18 @@ function transformCalendarToFixtures(calendar) {
 
     const fixtures = [...Array(tours)].map((_, i) => [`Тур ${i + 1}\n\r`])
 
-    console.log("initial fixtures", fixtures);
+    // console.log("initial fixtures", fixtures);
 
     calendar.forEach((gr, grIndex) => {
         gr.forEach((tour, tourIndex) => {
             fixtures[tourIndex].push(tour.games.join('\n') + '\n')
         })
     })
-    console.log("fixtures - ", fixtures);
+    // console.log("fixtures - ", fixtures);
 
     return fixtures.reduce((acc, fixturesTour, i) => {
 
-        console.log("fixturesTour -", fixturesTour);
+        // console.log("fixturesTour -", fixturesTour);
         return acc + `\n\r${fixturesTour.join('')}`
     }, "\n\r")
 }
