@@ -1,3 +1,19 @@
+const modal = document.getElementById('modal-insertion')
+
+window.onclick = function (e) {
+    // if (e.target == modal) {
+    if (e.target == modal && window.getComputedStyle(modal, null).display === 'flex') {
+        e.preventDefault();  
+        // console.log(window.getComputedStyle(modal, null).display);
+        // alert('modal')
+    }
+}
+
+/**
+================================== * 
+ */
+
+
 function parseExcelTableData(_data) {
 
     // console.log("_data - ", _data);
@@ -73,7 +89,7 @@ function formCalendar(tournament) {
         let middle = teamslist.splice(shift - 1, 1);
         teamslist.push(middle[0])
         middle = teamslist.splice(shift - 1, 1);
-        teamslist.splice(1, 0, middle[0]);  
+        teamslist.splice(1, 0, middle[0]);
     }
 
     calendar.pop()
