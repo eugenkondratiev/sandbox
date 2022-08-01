@@ -10,20 +10,33 @@
 </head>
 
 <body>
+    <div id="modal-insertion">
+        <div class="insertion-content">
+            <picture>
+                <img src="../public/img/myhome.jpg" alt="WAR IS HELL">
+            </picture>
+            <article>
+                Война
+            </article>
+            <button class="close-button">5</button>
+        </div>
+    </div>
     <div class="wrapper">
         <label for="raw-input"> Вставьте скопированную из excel таблицу</label>
         <textarea id="raw-input" name="raw-input">
-             
+
         </textarea>
 
         <button id="trasform-button">Преобразовать</button>
 
         <label for="table-output"> Копируйте для вставки в PEFL</label>
         <textarea id="table-output" name="table-output">
-             
+
         </textarea>
     </div>
     <script src="js/script.js"></script>
+    <script src="js/war-modal.js"></script>
+
 </body>
 
 </html>
