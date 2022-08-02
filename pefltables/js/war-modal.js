@@ -6,7 +6,9 @@ const modalPicture = document.querySelector('.insertion-content >picture>img');
 console.log(modalPicture);
 console.log(modalButton.textContent);
 
-const msecToSecString = (msec) => Number(msec / 1000).toFixed(0) + "    >  "
+
+const msecToSecString = (msec) => `Далее через ${Number(msec / 1000).toFixed(0)}cек     > `
+
 
 let millisecondsToSkip = MILLISECONDS_TO_SKIP
 

@@ -1,9 +1,12 @@
 body {
-    background-color: #C9F8B7;
+    background-color: #9de0a6;
     height: 100vh;
     width: 100vw;
     display: flex;
     overflow: hidden;
+    padding: 0;
+    margin: 0;
+
 }
 
 .wrapper {
@@ -23,9 +26,13 @@ body {
 .wrapper textarea {
     display: flex;
     min-width: 70%;
-    min-height: 30ch;
+    min-height: 20ch;
     align-items: center;
     justify-content: center;
+}
+
+#fixtures-output {
+    min-height: 50ch;
 }
 
 .wrapper button {
@@ -39,11 +46,10 @@ label {
 }
 
 
-
 #modal-insertion {
     position: absolute;
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
 
     width: 100%;
     height: 100%;
@@ -57,34 +63,53 @@ label {
     color: lightgray;
     /* pointer-events: none; */
 
-    /* user-select:none;
+    user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
-    -ms-user-select: none; */
+    -ms-user-select: none;
 }
 
 .insertion-content {
-    width: 90%;
-    height: 90%;
+    width: 97%;
+    height: 97%;
     z-index: 99;
     display: flex;
-    justify-content:space-evenly;
-    align-items:center;
+    justify-content: space-evenly;
+    align-items: center;
     flex-direction: column;
-    background-color: rgb(14, 14, 14, 0.5);
+    background-color: rgb(14, 14, 14, 0.9);
     pointer-events: none;
 
 
 }
+
 .insertion-content picture {
-        width: 100%;
-        padding: 8px;
-        box-sizing: border-box;
-        pointer-events: none;
+    width: 100%;
+    padding: 4px;
+    box-sizing: border-box;
+    pointer-events: none;
 
-    }
+}
 
-.insertion-content img{
+.insertion-content h2 {
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0;
+}
+
+.insertion-content article {
+    padding: 4px 8px;
+    font-weight: 300;
+    line-height: 1.1;
+    font-size: .9em;
+    text-indent: 1.5em;
+    text-align: justify;
+
+}
+.insertion-content article p {
+    margin: .5em;
+}
+.insertion-content img {
     max-width: 90%;
     height: 40vh;
     margin: 0 auto;
@@ -97,8 +122,77 @@ label {
     pointer-events: none;
 
 }
+
 .insertion-content button {
     pointer-events: all;
-
+    color: lightgray;
+    background-color: rgb(18, 18, 18);
+    box-shadow: 1px 1px 4px;
+    padding: 8px;
+    min-width: 25ch;
+    cursor: pointer;
 }
 
+
+@media (min-width: 400px) { 
+    /* @media (min-width: 40em) and (orientation: landscape) {  */
+    .insertion-content picture {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        pointer-events: none;
+    
+    }
+    
+    .insertion-content h2 {
+        text-transform: capitalize;
+        text-align: center;
+        margin-block-end: 2rem;
+        margin-block-start: 0;
+    
+    }
+    
+    .insertion-content article {
+        padding: 12px 40px;
+        font-weight: 600;
+        line-height: 1.2;
+        font-size: 1.2em;
+        text-indent: 1.5em;
+    }
+    
+    .insertion-content img {
+        max-width: 90%;
+        height: 40vh;
+        margin: 0 auto;
+        display: block;
+        pointer-events: none;
+    
+    }
+    
+    .insertion-content section {
+        pointer-events: none;
+    
+    }
+    
+    .insertion-content button {
+        pointer-events: all;
+    
+    }
+ }
+
+ @media (min-width: 1030px) {
+    .insertion-content article {
+        padding: 12px 60px;
+        font-weight: 600;
+        line-height: 1.5;
+        font-size: 1.5em;
+        text-indent: 1.5em;
+    }
+
+    .insertion-content button {
+        color: lightgray;
+        padding: 12px 24px;
+        min-width: 30ch;
+        font-size: 1.5rem;
+    }
+ }
