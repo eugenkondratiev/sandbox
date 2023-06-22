@@ -160,6 +160,18 @@ label {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .dropbox-wrapper {
+        flex-direction: column;
+
+    }
+
+    .wrapper .dropbox-wrapper select {
+
+        margin-bottom: 1rem;
+
+    }
+}
 
 @media (min-width: 400px) {
 
